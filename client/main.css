@@ -1,0 +1,40 @@
+:root {
+  --background-color: #F0F2F5;
+  --background-bar-color: #D1D7DB;
+
+  --action-color: #5A80D9;
+
+  --font-size-title: 26px;
+  --font-weigth-title: 600;
+
+  --font-size-default: 16px;
+  --font-color-default: #54656F;
+
+  --font-color-placeholder: #919EA6;
+  --font-color-light: #FFFFFF;
+
+  --action-bar-background: #008069;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background: #D8DBE3 url('/img/background.svg') fixed bottom no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  display: flex;
+  height: 100vh;
+  color: var(--font-color-default);
+  font-size: var(--font-size-default);
+  margin: 0;
+}
+
+input, button {
+  all: unset;
+}
+
+#react-target {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
