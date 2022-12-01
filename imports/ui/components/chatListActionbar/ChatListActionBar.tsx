@@ -1,11 +1,8 @@
 import React from "react";
-import {
-  ActionIcon,
-  ChatsActionBarContainer,
-  UserName,
-} from "./ChatsActionbar.styles";
+import { ActionIcon } from "../../layouts/icon.styles";
+import { ChatsActionBarContainer, UserName } from "./ChatListActionbar.styles";
 
-export const ChatsActionBar = ({
+export const ChatListActionBar = ({
   userName,
   logoutAction,
   toggleNewChatAction,

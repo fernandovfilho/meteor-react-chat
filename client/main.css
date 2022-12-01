@@ -1,6 +1,7 @@
 :root {
   --background-color: #F0F2F5;
   --background-bar-color: #D1D7DB;
+  --background-color-light: #FFFFFF;
 
   --action-color: #5A80D9;
 
@@ -37,4 +38,20 @@ input, button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #DEDEDE; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A29F9F; 
 }
