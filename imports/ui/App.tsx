@@ -3,8 +3,10 @@ import { Toaster } from "react-hot-toast";
 import { Account } from "./pages/account/Account";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Chat } from "./pages/chat/Chat";
-import { ProvideAuth } from "../api/providers/ProvideAuth";
-import { PrivateRoute } from "../api/providers/PrivateRoute";
+import { ProvideAuth } from "../api/providers/auth/ProvideAuth";
+import { PrivateRoute } from "../api/providers/auth/PrivateRoute";
+import { ProvideUsers } from "../api/providers/users/ProvideUsers";
+import { ProvideChat } from "../api/providers/chat/ProvideChat";
 
 export const App = () => (
   <>
@@ -16,7 +18,11 @@ export const App = () => (
             <Account />
           </Route>
           <PrivateRoute path="/chat">
-            <Chat />
+            <ProvideUsers>
+              <ProvideChat>
+                <Chat />
+              </ProvideChat>
+            </ProvideUsers>
           </PrivateRoute>
         </Switch>
       </Router>

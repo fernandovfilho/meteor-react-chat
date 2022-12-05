@@ -15,6 +15,13 @@
   --font-color-light: #FFFFFF;
 
   --action-bar-background: #008069;
+  --action-bar-height: 62px;
+
+  --messages-background-color: #F3EFE9;
+
+  --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
+
+  --sent-message-background: #D9FDD3;
 }
 
 body {

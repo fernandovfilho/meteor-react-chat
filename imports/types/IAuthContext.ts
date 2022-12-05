@@ -1,7 +1,7 @@
 import { IAccountUserDto } from "./IAccountUserDto";
 import { ILoggedUser } from "./ILoggedUser";
 
-export interface IProvideAuth {
+export interface IAuthContext {
   user?: ILoggedUser;
   isLogged?: boolean;
   signIn: (userData: IAccountUserDto) => Promise<void>;

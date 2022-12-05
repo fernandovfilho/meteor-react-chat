@@ -11,7 +11,7 @@ export const NewChatContainer = styled.div`
 export const NewChatActionBar = styled.div`
   display: flex;
   background-color: var(--action-bar-background);
-  height: 62px;
+  height: var(--action-bar-height);
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +20,7 @@ export const NewChatActionBar = styled.div`
 export const NewChatTitle = styled.span`
   color: var(--font-color-light);
   font-size: var(--font-size-default);
-  flex: 1;
+  flex: auto;
 `;
 
 export const NewChatItems = styled.div`
@@ -30,7 +30,12 @@ export const NewChatItems = styled.div`
 `;
 
 export const NewChatItem = styled.div`
-  background-color: var(--background-color-light);
-  flex: auto;
-  overflow-y: auto;
+  font-size: var(--font-size-default);
+  padding: 20px;
+  border-bottom: 1px solid var(--background-bar-color);
+  cursor: pointer;
+  transition: 0.5s;
+  :hover {
+    background-color: var(--background-color);
+  }
 `;

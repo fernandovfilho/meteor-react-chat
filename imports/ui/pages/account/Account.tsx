@@ -14,7 +14,7 @@ import {
 import toast from "react-hot-toast";
 import { IAccountUserDto } from "/imports/types/IAccountUserDto";
 import { useHistory } from "react-router";
-import { useAuth } from "/imports/api/providers/useAuth";
+import { useAuth } from "../../../api/providers/auth/useAuth";
 
 export const Account = () => {
   let history = useHistory();
@@ -29,7 +29,9 @@ export const Account = () => {
   const [loading, setLoading] = useState<boolean>(false);
 
   const redirect = () => {
-    history.push("/chat");
+    setTimeout(() => {
+      history.push("/chat");
+    }, 1000);
   };
 
   const createUserHandler = async (event: FormEvent<HTMLFormElement>) => {

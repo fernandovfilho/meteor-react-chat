@@ -1,16 +1,17 @@
 import { Mongo } from "meteor/mongo";
 
-export interface Chat {
+export interface IChat {
+  _id?: string;
   users: string[];
   lastMessage?: string;
   lastMessageAt?: Date;
-  messages: Message[];
+  messages: IMessage[];
 }
 
-export interface Message {
+export interface IMessage {
   createdAt: Date;
   text: string;
   user: string;
 }
 
-export const ChatsCollection = new Mongo.Collection<Chat>("chats");
+export const ChatsCollection = new Mongo.Collection<IChat>("chats");

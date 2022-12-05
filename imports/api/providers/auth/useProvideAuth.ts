@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { ILoggedUser } from "/imports/types/ILoggedUser";
-import { IProvideAuth } from "/imports/types/IProvideAuth";
+import { IAuthContext } from "../../../types/IAuthContext";
 import { Meteor } from "meteor/meteor";
 import { useTracker } from "meteor/react-meteor-data";
-import AccountsService from "../services/AccountsService";
+import AccountsService from "../../services/AccountsService";
 import { IAccountUserDto } from "/imports/types/IAccountUserDto";
 
-export const useProvideAuth = (): IProvideAuth => {
+export const useProvideAuth = (): IAuthContext => {
   const [user, setUser] = useState<ILoggedUser>();
   const [isLogged, setIslogged] = useState<boolean>(true);
 

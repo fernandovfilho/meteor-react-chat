@@ -1,1 +1,2 @@
 import "./usersPublish";
+import "./chatsPublish";

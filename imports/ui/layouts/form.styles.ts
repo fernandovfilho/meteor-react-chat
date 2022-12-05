@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: auto;
 `;
 
 export const FormTitle = styled.h1`
@@ -22,7 +22,7 @@ export const FormInput = styled.input`
   background-color: #ffffff;
   border-radius: 5px;
   margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 2px;
+  box-shadow: var(--box-shadow);
   ::placeholder {
     color: var(--font-color-placeholder);
   }

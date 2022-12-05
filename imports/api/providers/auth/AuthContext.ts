@@ -1,7 +1,7 @@
 import { createContext } from "react";
-import { IProvideAuth } from "/imports/types/IProvideAuth";
+import { IAuthContext } from "../../../types/IAuthContext";
 
-export const AuthContext = createContext<IProvideAuth>({
+export const AuthContext = createContext<IAuthContext>({
   signIn: async () => {},
   signUp: async () => {},
   logout: async () => {},

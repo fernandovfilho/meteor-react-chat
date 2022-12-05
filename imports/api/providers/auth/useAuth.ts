@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "./AuthContext";
-import { IProvideAuth } from "/imports/types/IProvideAuth";
+import { IAuthContext } from "../../../types/IAuthContext";
 
-export const useAuth = (): IProvideAuth => {
+export const useAuth = (): IAuthContext => {
   return useContext(AuthContext);
 };
