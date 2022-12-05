@@ -41,11 +41,9 @@ export const Conversation = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      if (messagesElement) {
-        messagesElement.scrollTop = messagesElement?.scrollHeight;
-      }
-    }, 400);
+    if (messagesElement) {
+      messagesElement.scrollTop = messagesElement?.scrollHeight;
+    }
   }, [chat]);
 
   const messages = () => {
@@ -53,7 +51,10 @@ export const Conversation = () => {
       const isReceived = authContext.user?.id !== message.user;
 
       return (
-        <MessageContainer isReceived={isReceived}>
+        <MessageContainer
+          key={message.createdAt.valueOf()}
+          isReceived={isReceived}
+        >
           <MessageContent isReceived={isReceived}>
             <Message>{message.text}</Message>
             <MessageDate>

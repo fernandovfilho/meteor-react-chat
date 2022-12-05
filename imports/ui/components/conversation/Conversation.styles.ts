@@ -51,7 +51,7 @@ export const Message = styled.span`
 `;
 
 export const MessageDate = styled.span`
-  font-size: 12px;
+  font-size: 10px;
   color: var(--font-color-default);
   margin: 0 5px;
 `;

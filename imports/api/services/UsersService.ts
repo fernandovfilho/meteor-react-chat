@@ -7,7 +7,10 @@ export class UsersService {
   static getChatUser(chat: IChat): ILoggedUser | undefined {
     const usersContext = useUsers();
     const currentUserId = Meteor.userId();
-    const userId = chat.users.find((user) => currentUserId !== user);
-    return usersContext.users.find((user) => user.id === userId);
+    if (chat && chat.users) {
+      const userId = chat.users.find((user) => currentUserId !== user);
+      return usersContext.users.find((user) => user.id === userId);
+    }
+    return { email: "", id: "", name: "" };
   }
 }
